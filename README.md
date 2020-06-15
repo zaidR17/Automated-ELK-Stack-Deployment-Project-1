@@ -9,12 +9,13 @@ Cybersecurity Boot Camp
 
 *The files in this repository were used to configure the network depicted below.
 
-![Project 1 Red-Team Network Diagram](Images/Project 1 Red-Team Network Diagram.PNG)
+[Project 1 Red-Team Network Diagram](https://github.com/zaidR17/Automated-ELK-Stack-Deployment-Project-1/blob/master/Diagrams/Project%201%20Red-Team%20Network%20Diagram.PNG)
 
 *These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Project 1 Red-Team Network Diagram file may be used to install only certain pieces of it, such as Filebeat.
 
-   _ filebeat-playbook.yml 
-   _ filebeat-configuration.yml 
+   [filebeat-playbook.yml](https://github.com/zaidR17/Automated-ELK-Stack-Deployment-Project-1/blob/master/Ansible/filebeat_playbook.yml.txt) 
+   
+   [filebeat-configuration.yml](https://github.com/zaidR17/Automated-ELK-Stack-Deployment-Project-1/blob/master/Linux/filebeat_configuration.yml.txt) 
 
 *This document contains the following details:
 - Description of the Topology
@@ -108,7 +109,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 *The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![ELK-VM Docker PS](Images/ELK-VM Docker PS.PNG)
+[ELK-VM Docker PS](https://github.com/zaidR17/Automated-ELK-Stack-Deployment-Project-1/blob/master/Diagrams/Project%201%20Red-Team%20Network%20Diagram.PNG)
 
 ### Target Machines & Beats
 *This ELK server is configured to monitor the following machines:
@@ -120,8 +121,8 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 - We have installed the following Beats on these machines:
 
-	- Filebeat [screenshot of module status provided (Images/Filebeat_Module_Status.PNG)]
-	- Metricbeat [screenshot of module status provided (Images/Metricbeat_Module_Status.PNG)
+	- [Filebeat Module Status Screenshot](Images/Filebeat_Module_Status.PNG)
+	- [Metricbeat Module Status Screenshot](Images/Metricbeat_Module_Status.PNG)
 
 *These Beats allow us to collect the following information from each machine:
 - In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
