@@ -191,42 +191,45 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
     	   - name: start filebeat service
       	    command: service filebeat start
 	---
-
-	-To run the playbook: ansible-playbook filebeat-playbook.yml *
-* In order to run the playbook, you have to be in the directory the playbook is at, or give the path to it (ansible-playbook /etc/ansible/roles/filebeat-playbook.yml.
-
-
-    -------Metricbeat---------
-
+	-To run the playbook: ansible-playbook filebeat-playbook.yml
+	
+	* In order to run the playbook, you have to be in the directory the playbook is at, or give the path to it (ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
+	
+	
+	-------Metricbeat-------
+	
 	- To create the metricbeat-configuration.yml file: nano metricbeat-configuration.yml. For this, I used the metricbeat configuration file template.
-	- To create the playbook: nano metricbeat-playbook.yml
-      ---
-	- name: installing and launching metricbeat
- 	  hosts: webservers
-	  become: true
-	  tasks:
-
-  	 - name: download metricbeat deb
-    	   command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.7.1-amd64.deb
-
-	 - name: install metricbeat deb
-           command: sudo dpkg -i metricbeat-7.7.1-amd64.deb
-
-  	 - name: drop in metricbeat.yml
-    	   copy:
-      	     src: /etc/ansible/roles/files/metricbeat-configuration.yml
-             dest: /etc/metricbeat/metricbeat.yml
-
-         - name: enable and configure system module
-           command: metricbeat modules enable system
-
-  	 - name: setup metricbeat
-    	   command: metricbeat setup
-
-  	 - name: start metricbeat service
-           command: service metricbeat start
-
+	- To create the playbool: nano metricbeat-playbook.yml
+	
 	---
-
-	-To run the playbook: ansible-playbook metricbeat-playbook.yml *
-* In order to run the playbook, you have to be in the directory the playbook is at, or give the path to it (ansible-playbook /etc/ansible/roles/metricbeat-playbook.yml.
+	  - name: installing and lunching metricbeat
+	    hosts: webservers
+	    become: true
+	    tasks:
+	    
+	  - name: download metricbeat deb
+	    command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.7.1-amd64.deb
+	    
+	  - name: install metricbeat deb
+	    command: sudo dpkg -i metricbeat-7.7.1-amd64.deb
+	    
+	  - name: drop in metricbeat.yml
+	    copy:
+	      src: /etc/ansible/roles/files/metricbeat-configuration.yml
+	      dest: /etc/metricbeat/metricbeat.yml
+	      
+	   - name: enable and configure system module
+	     command: metricbeat modules enable system
+	     
+	   - name: setup metricbeat
+	     command: metricbeat setup
+	     
+	   - name: start metricbrat service
+	     command: service metricbeat start
+	     
+	   ---
+	   
+	   - To run the playbook: ansible-playbook metricbeat-playbook.yml
+	   
+	   * To order to run the playbook, you have to be in the directory the playbook is at, or give the path to it (ansible-playbook /etc/ansible/roles/metricbeat-playbook.yml
+	    
