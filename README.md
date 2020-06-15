@@ -227,7 +227,7 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 	   - name: setup metricbeat
 	     command: metricbeat setup
 	     
-	   - name: start metricbrat service
+	   - name: start metricbeat service
 	     command: service metricbeat start
 	     
 	   ---
